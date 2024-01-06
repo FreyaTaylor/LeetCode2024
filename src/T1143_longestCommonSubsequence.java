@@ -1,4 +1,4 @@
-package Dec2023;
+package src;
 
 public class T1143_longestCommonSubsequence {
 
