@@ -2,7 +2,7 @@ package src;
 
 import java.util.List;
 
-public class CountIntervals {
+public class _CountIntervals {
     /**
      * https://leetcode.cn/problems/count-integers-in-intervals/
      * @param args
@@ -16,7 +16,7 @@ public class CountIntervals {
     private List<Integer> lb;
     private List<Integer> rb;
 
-    public CountIntervals() {
+    public _CountIntervals() {
 
     }
 

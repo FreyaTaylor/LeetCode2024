@@ -1,4 +1,4 @@
-package src;
+package src.Other.StorageRectangle;
 
 import java.util.*;
 

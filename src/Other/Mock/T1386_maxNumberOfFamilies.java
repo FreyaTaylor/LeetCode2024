@@ -1,4 +1,4 @@
-package src;
+package src.Other.Mock;
 
 import javax.print.DocFlavor;
 import java.util.*;

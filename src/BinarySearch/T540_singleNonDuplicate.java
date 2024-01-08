@@ -1,4 +1,4 @@
-package src;
+package src.BinarySearch;
 
 public class T540_singleNonDuplicate {
 

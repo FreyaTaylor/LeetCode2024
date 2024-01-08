@@ -1,6 +1,4 @@
-package src;
-
-import java.util.Arrays;
+package src.DynamicPrograming.SubString;
 
 public class T718_findLength {
     /**

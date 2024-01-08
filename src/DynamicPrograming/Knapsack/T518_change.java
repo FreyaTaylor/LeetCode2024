@@ -1,7 +1,4 @@
-package src;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
+package src.DynamicPrograming.Knapsack;
 
 public class T518_change {
 

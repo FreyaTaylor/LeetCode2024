@@ -1,4 +1,4 @@
-package src;
+package src.DynamicPrograming.Subsequence;
 
 public class T1143_longestCommonSubsequence {
 
