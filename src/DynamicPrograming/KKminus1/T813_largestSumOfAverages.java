@@ -1,4 +1,4 @@
-package src.DynamicPrograming;
+package src.DynamicPrograming.KKminus1;
 
 public class T813_largestSumOfAverages {
 
