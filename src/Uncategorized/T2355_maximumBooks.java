@@ -126,21 +126,7 @@ public class T2355_maximumBooks {
 
 
 
-<<<<<<< Updated upstream:src/Uncategorized/T2355_maximumBooks.java
-=======
-        for (int i = 0; i < n; i++) {
-            diff[i]=books[i]-1;
-        }
 
-        for (int i = 0; i < n; i++) {
-            while (!q.isEmpty() && diff[q.getLast()]>=diff[i]){
-
-            }
-        }
-
-        return -1;
-    }
->>>>>>> Stashed changes:src/Uncategorized/_T2355_maximumBooks.java
 
     public static void main(String[] args) {
         int[] books = new int[]{8,5,2,7,9};
