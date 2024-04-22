@@ -127,7 +127,6 @@ public class T2355_maximumBooks {
 
 
 
-
     public static void main(String[] args) {
         int[] books = new int[]{8,5,2,7,9};
 //        books = new int[]{8,2,3,7,3,4,0,1,4,3};
