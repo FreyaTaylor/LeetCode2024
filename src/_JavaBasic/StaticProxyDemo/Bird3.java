@@ -1,4 +1,4 @@
-package src._JavaBasic.ProxyDemo;
+package src._JavaBasic.StaticProxyDemo;
 
 public class Bird3 implements Flyable {
 

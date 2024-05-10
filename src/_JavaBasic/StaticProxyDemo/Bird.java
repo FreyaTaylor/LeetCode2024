@@ -1,4 +1,4 @@
-package src._JavaBasic.ProxyDemo;
+package src._JavaBasic.StaticProxyDemo;
 
 import java.util.Random;
 
