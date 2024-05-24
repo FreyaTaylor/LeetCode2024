@@ -1,5 +1,6 @@
 package src.DynamicPrograming;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -7,18 +8,19 @@ public class T1301_pathsWithMaxScore {
 
     /**
      * https://leetcode.cn/problems/number-of-paths-with-max-score/
-     * @param args
+     * 向上、向左或者左上方移动
      */
 
     public int[] pathsWithMaxScore(List<String> board) {
 
+        int mod = (int)Math.pow(10,9)+7;
         int n = board.size();
         int[][] num = new int[n][n];
         for (int i = 0; i < n; i++) {
             String s = board.get(i);
             for (int j = 0; j < n; j++) {
                 if(Character.isDigit(s.charAt(j))){
-                    num[i][j]=Integer.valueOf(s.charAt(j));
+                    num[i][j]=Integer.valueOf(s.charAt(j)+"");
                 }else {
                     num[i][j]=-1;
                 }
@@ -36,8 +38,6 @@ public class T1301_pathsWithMaxScore {
 
         count[n-1][n-1]=1;
         maxScore[n-1][n-1]=0;
-
-
         for (int i = n-2; i >-1; i--) {
             if(num[i][n-1]!=-1){
                 count[i][n-1]=1;
@@ -46,7 +46,6 @@ public class T1301_pathsWithMaxScore {
                 break;
             }
         }
-
         for (int i = n-2; i >-1; i--) {
             if(num[n-1][i]!=-1 ){
                 count[n-1][i]=1;
@@ -59,51 +58,55 @@ public class T1301_pathsWithMaxScore {
         for (int i = n-2; i >-1 ; i--) {
             for (int j = n-2; j >-1 ; j--) {
 
-                int count_=0;
-                int maxScore_=Integer.MIN_VALUE;
-
-
                 if(num[i][j]!=-1){
-                    if(num[i+1][j]!=-1 && num[i][j+1]!=-1){
-                        if(maxScore[i+1][j]==maxScore[i][j+1]){
-                            maxScore_=maxScore[i+1][j];
-                            count_=count[i+1][j]+count[i][j+1];
-                        }else if(maxScore[i+1][j]>maxScore[i][j+1]){
-                            maxScore_=maxScore[i+1][j];
-                            count_=count[i+1][j];
-                        }else {
-                            maxScore_=maxScore[i][j+1];
-                            count_=count[i][j+1];
-                        }
-                    }else if(num[i+1][j]!=-1 && num[i][j+1]==-1){
-                        maxScore_=maxScore[i+1][j];
-                        count_=count[i+1][j];
-                    }else if(num[i+1][j]==-1 && num[i][j+1]!=-1){
-                        maxScore_=maxScore[i][j+1];
-                        count_=count[i][j+1];
-                    }
+                    int maxScore_=Integer.MIN_VALUE;
+                    int count_=0;
 
+                    int[][] pre = new int[][]{
+                            {maxScore[i+1][j],count[i+1][j]},
+                            {maxScore[i][j+1],count[i][j+1]},
+                            {maxScore[i+1][j+1],count[i+1][j+1]}};
+                    for (int k = 0; k < 3; k++) {
+                        if(pre[k][0]>maxScore_){
+                            maxScore_=pre[k][0];
+                            count_=pre[k][1];
+                        }else if(pre[k][0]==maxScore_){
+                            count_+=pre[k][1];
+                            count_%=mod;
+                        }
+                    }
+                    if(maxScore_!=Integer.MIN_VALUE){
+                        maxScore[i][j]=maxScore_+num[i][j];
+                        count[i][j]=count_;
+                    }
                 }
 
-                maxScore[i][j]=maxScore_+num[i][j];
-                count[i][j]=count_;
 
             }
         }
 
-
-
+        if(maxScore[0][0]==Integer.MIN_VALUE){
+            return new int[]{0,0};
+        }
         return new int[]{maxScore[0][0],count[0][0]};
-
     }
 
 
     public static void main(String[] args) {
-         List<String> board = new String[]{
-                "E12",
-                "1X1",
-                "21S"};
+         List<String> board = new ArrayList<>();
+         board.add("E12");
+         board.add("1X1");
+         board.add("21S");
 //        输出：[4,2]
+//        board.clear();
+//        board.add("E11");
+//        board.add("XXX");
+//        board.add("11S");
+
+//        board.clear();
+//        board.add("EX");
+//        board.add("XS");
+
 
         int[] res = new T1301_pathsWithMaxScore().pathsWithMaxScore(board);
         System.out.println(Arrays.toString(res));

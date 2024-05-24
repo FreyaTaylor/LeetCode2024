@@ -1,6 +1,6 @@
 package src.Greedy;
 
-public class _T240_searchMatrix {
+public class T240_searchMatrix {
 
     /**
      * https://leetcode.cn/problems/search-a-2d-matrix-ii/description/

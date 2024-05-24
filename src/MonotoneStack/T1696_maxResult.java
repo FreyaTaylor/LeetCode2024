@@ -1,10 +1,7 @@
-package src.Traverse;
+package src.MonotoneStack;
 
 import java.util.ArrayDeque;
-import java.util.Comparator;
 import java.util.Deque;
-import java.util.PriorityQueue;
-import java.util.concurrent.DelayQueue;
 
 public class T1696_maxResult {
     /**

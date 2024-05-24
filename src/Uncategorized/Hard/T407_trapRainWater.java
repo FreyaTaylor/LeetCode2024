@@ -19,7 +19,6 @@ public class T407_trapRainWater {
         int m = heightMap[0].length;
 
         boolean[][] visited = new boolean[n][m];
-
         int[][] hasWater = new int[n][m];
 
         PriorityQueue<int[]> q = new PriorityQueue<>(new Comparator<int[]>() { // height,x,y
@@ -35,7 +34,7 @@ public class T407_trapRainWater {
                 if(i==0 || i==n-1 || j==0 || j==m-1){
                     q.add(new int[]{heightMap[i][j],i,j});
                     hasWater[i][j]=heightMap[i][j];
-                    visited[i][j]=true;
+//                    visited[i][j]=true;
                 }
             }
         }

@@ -44,6 +44,7 @@ public class T912_sortArray {
 //            quick(nums,i+1,r);
 //        }
 
+        // i==j
         if(nums[i]>mark){
             i--;
         }

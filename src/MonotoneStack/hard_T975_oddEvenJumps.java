@@ -57,13 +57,14 @@ public class hard_T975_oddEvenJumps {
         // 排序后，依次处理，遍历到的数组一定是dq中数组的“最小bigger值”，若index符合，则更新；否则待定不更新
         Deque<Integer> dq = new ArrayDeque<>();
         for (int i = 0; i < n; i++) {
+            // dq 都是小于iarr[i]的，iarr是升序。dp升序，数值合理，等待index合理，则可更新！！！！！！
             while (!dq.isEmpty()&&dq.getLast()<iarr[i][0]){
                 oddNextBigger[dq.pollLast()]=iarr[i][0];
             }
             dq.addLast(iarr[i][0]);
-//            System.out.println();
+            System.out.println();
         }
-//        System.out.println();
+        System.out.println();
 
         Arrays.sort(iarr, new Comparator<int[]>() {
             @Override
@@ -142,7 +143,7 @@ public class hard_T975_oddEvenJumps {
 
     public static void main(String[] args) {
         System.out.println(new hard_T975_oddEvenJumps().oddEvenJumps(new int[]{5,1,3,4,2}));
-        System.out.println(new hard_T975_oddEvenJumps().oddEvenJumps(new int[]{2,3,1,1,4}));
+//        System.out.println(new hard_T975_oddEvenJumps().oddEvenJumps(new int[]{2,3,1,1,4}));
     }
 
 }

@@ -1,12 +1,10 @@
-package src.DynamicPrograming;
+package src.DynamicPrograming.Hard;
 
-import java.nio.charset.IllegalCharsetNameException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
-public class _T730_countPalindromicSubsequences {
+public class hard_T730_countPalindromicSubsequences {
     /**
      * https://leetcode.cn/problems/count-different-palindromic-subsequences/
      *
@@ -80,7 +78,7 @@ public class _T730_countPalindromicSubsequences {
     }
 
     public static void main(String[] args) {
-        System.out.println(new _T730_countPalindromicSubsequences().countPalindromicSubsequences("a"));
+        System.out.println(new hard_T730_countPalindromicSubsequences().countPalindromicSubsequences("a"));
 //        System.out.println(new _T730_countPalindromicSubsequences().countPalindromicSubsequences("abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba"));
 //        System.out.println(new _T730_countPalindromicSubsequences().countPalindromicSubsequences("bccb"));
     }
