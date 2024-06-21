@@ -1,4 +1,4 @@
-package src.DFS;
+package src.DFS.SubsetSelection;
 
 import java.util.ArrayList;
 import java.util.Arrays;

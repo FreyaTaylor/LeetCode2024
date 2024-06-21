@@ -1,4 +1,4 @@
-package src.Other.StorageRectangle;
+package src.Traverse.StorageRectangle;
 
 import java.util.ArrayList;
 import java.util.Arrays;

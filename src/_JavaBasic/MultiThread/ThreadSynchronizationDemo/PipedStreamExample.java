@@ -1,4 +1,4 @@
-package src._JavaBasic.ThreadDemo;
+package src._JavaBasic.MultiThread.ThreadSynchronizationDemo;
 
 
 import java.io.IOException;
@@ -8,10 +8,12 @@ import java.io.PipedOutputStream;
 public class PipedStreamExample {
 
     public static void main(String[] args) throws IOException {
-        // 创建管道的输入输出流
+        // 创建管道的输入输出流，并明确对应关系，对出流的写会进到入流中
         PipedOutputStream pos = new PipedOutputStream();
         PipedInputStream pis = new PipedInputStream(pos);
 
+
+        // 一个用于写入数据到 PipedOutputStream，另一个用于从 PipedInputStream 读取数据。
         // 启动写入线程
         Thread writerThread = new Thread(() -> {
             try {

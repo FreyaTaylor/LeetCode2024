@@ -1,4 +1,4 @@
-package src._JavaBasic.ThreadDemo;
+package src._JavaBasic.MultiThread.ThreadSynchronizationDemo;
 
 import java.util.concurrent.*;
 
