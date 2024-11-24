@@ -19,9 +19,11 @@ public class PhaserArriveAndDeregisterExample {
                     // 工作完成后，调用 arriveAndDeregister 减少参与者数量
                     if(workerId==1){
                         phaser.arriveAndDeregister();
+                        Thread.sleep((long) (Math.random() * 200));
                         System.out.println("Worker " + workerId + " has finished and deregistered.");
                     }else {
                         phaser.arrive();
+                        Thread.sleep((long) (Math.random() * 200));
                         System.out.println("Worker " + workerId + " has finished.");
                     }
 

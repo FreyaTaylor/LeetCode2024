@@ -53,7 +53,7 @@ public class MyCallable implements Callable<Integer> {
 //        FutureTask<Integer> ft = new FutureTask<>(new MyCallable());
 
         // 手动启动FutureTask
-//        new Thread(new FutureTask<>(new MyCallable())).start();
+        new Thread(new FutureTask<>(new MyCallable())).start();
 
 //        System.out.println(ft.get());
 //

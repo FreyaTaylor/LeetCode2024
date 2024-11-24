@@ -5,6 +5,11 @@ import java.util.Deque;
 
 public class T143_reorderList {
 
+    /**
+     * https://leetcode.cn/problems/reorder-list/description/
+     * @param head
+     */
+
     public void reorderList(ListNode head) {
 
         int n = 0;

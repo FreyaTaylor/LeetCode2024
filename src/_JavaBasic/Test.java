@@ -3,6 +3,8 @@ package src._JavaBasic;
 import src._JavaBasic.SerializableDemo.User;
 
 import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Test {
@@ -57,5 +59,18 @@ public class Test {
 
 
         System.out.println(obj.exampleMethod());
+
+
+
+        Map<Integer,Integer> map1 = new HashMap<>();
+        map1.put(null,null);
+        map1.put(null,3);
+        map1.put(3,null);
+
+        System.out.println(map1.get(null));
+
+        Map<Integer,Integer> map2 = new ConcurrentHashMap<>();
+        map2.put(1,1);
+
     }
 }
